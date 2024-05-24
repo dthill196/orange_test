@@ -20,5 +20,5 @@ dat <- dat %>% mutate(county = ifelse(county == 'St Lawrence', 'St_Lawrence', co
 # Filter data based on county name
 dat_filtered <- dat %>% filter(county == county_name)
 output_file <- paste0('result/', county_name, "_processed_data.rds")
-saveRDS(dat_filtered, file = output_file)
+saveRDS(object = dat_filtered, file = output_file)
 
